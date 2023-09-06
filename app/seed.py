@@ -31,6 +31,18 @@ if __name__ == "__main__":
         session.add(museum)
         session.commit()
     print("DONE SEEDING MUSEUMS!")
+    print("SEEDING ARTISTS........")
+    for _ in range(20):
+        artist = Artists(
+        first_name=fake.first_name(),
+        last_name=fake.last_name(),
+        rating=random.randint(1, 5)
+    )
+    session.add(artist)
+    session.commit()
+    print("DONE SEEDING ARTISTS!")
+       
+        
     
     print("SEEDING ARTWORKS........")
     artwork = [
@@ -88,6 +100,14 @@ if __name__ == "__main__":
         session.add(art)
         session.commit()
     print("DONE SEEDING ARTWORKS!")
+
+    
+   
+
+          
+    
+
+
         
 
     
