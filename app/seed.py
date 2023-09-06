@@ -19,7 +19,17 @@ if __name__ == "__main__":
     session.query(museum_artist).delete()
     print("DONE!")
 
-    
+    print("SEEDING MUSEUMS......")
+    museums = ["Museum of Bad Art", "International Spy Museum", "Museum of Medieval Torture Instruments", "Museum of Jurassic Technology", "Icelandic Phallological Museum"]
+    for museum_name in museums:
+        museum = Museums(
+            name=museum_name,
+            location=fake.city(),
+            Year_built=fake.date()
+        )
+        session.add(museum)
+        session.commit()
+    print("DONE SEEDING MUSEUMS!")
 
     session.close()
 
