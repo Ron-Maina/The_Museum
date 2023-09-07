@@ -31,19 +31,22 @@ if __name__ == "__main__":
         session.add(museum)
         session.commit()
     print("DONE SEEDING MUSEUMS!")
+
+
     print("SEEDING ARTISTS........")
+    artists_list = []
     for _ in range(20):
         artist = Artists(
-        first_name=fake.first_name(),
-        last_name=fake.last_name(),
-        rating=random.randint(1, 5)
-    )
-    session.add(artist)
-    session.commit()
+            first_name=fake.first_name(),
+            last_name=fake.last_name(),
+            rating=random.randint(1, 5)
+        )
+        session.add(artist)
+        session.commit()
+        artists_list.append(artist)
     print("DONE SEEDING ARTISTS!")
        
-        
-    
+
     print("SEEDING ARTWORKS........")
     artwork = [
       "Starry Night at the Alien Discotheque",
