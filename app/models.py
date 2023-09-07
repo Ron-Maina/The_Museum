@@ -13,8 +13,9 @@ Session = sessionmaker(bind=engine)
 museum_artist = Table(
     'museum_artists',
     Base.metadata,
-    Column('museum_id', ForeignKey('museums.id'), primary_key = True),
-    Column('artists_id', ForeignKey('artists.id'), primary_key = True)
+    Column('museum_id', ForeignKey('museums.id')),
+    Column('artists_id', ForeignKey('artists.id')),
+    extend_existing=True,
 )
 
 
