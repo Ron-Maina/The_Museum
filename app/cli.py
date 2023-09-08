@@ -9,7 +9,6 @@ engine = create_engine('sqlite:///Museums.db')
 session_maker = sessionmaker(bind=engine)
 session = session_maker()
 
-# Enter Code Here
 while True:
     text = "Welcome to The Museum!"
     click.echo(text.center(100))
@@ -80,7 +79,8 @@ while True:
                 Date of Exhibition:  {selected.date_of_exhibition}.
                 """
                 )
-elif choice == 2:
+        
+        elif choice == 2:
             def menu_2():
                 click.echo("\nAre you: ")
                 for i, selection in enumerate(["New Artist", "Existing Artist"], 1):
@@ -160,7 +160,9 @@ elif choice == 2:
         else:
             click.echo("INVALID INPUT")
 
-        
 
-if __name__ == '__main__':
-    cli()
+                    
+
+
+    if __name__ == '__main__':
+        cli()
