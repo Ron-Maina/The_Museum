@@ -49,7 +49,7 @@
 
 
 # Author
-* Ron Maina
+* Ron Maina, Pius Mwangi, Macray Korir, Cathy Maseki
 
 # License 
 MIT License
